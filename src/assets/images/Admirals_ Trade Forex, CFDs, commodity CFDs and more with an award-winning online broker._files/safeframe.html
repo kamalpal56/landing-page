@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Safeframe</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script type="text/javascript">
+    var EMPTY_STRING = "";
+    var BLANK_STRING = " ";
+
+    var Timestamp = {
+      current: function () {
+        return new Date().getTime();
+      },
+    };
+
+    var Keywords = {
+      createKeywordsFromText: function (text) {
+        var clearedText = text.replace(/[^a-z0-9]/gi, BLANK_STRING);
+        var trimmedText = clearedText.replace(/\s+/g, BLANK_STRING).replace(/^\s+|\s+$/, EMPTY_STRING);
+
+        return trimmedText.split(BLANK_STRING).filter(function (word) {
+          return word.length > 3;
+        });
+      },
+      createKeyword: function (name) {
+        return {
+          ts: Timestamp.current(),
+          name: name,
+          count: 1,
+        };
+      },
+      limitKeywords: function (existingKeywords, limit) {
+        if (existingKeywords.length > limit) {
+          var sorted = Array.from(existingKeywords).sort(function (keywordA, keywordB) {
+            return keywordA.ts > keywordB.ts ? -1 : 1;
+          });
+
+          return sorted.splice(0, limit);
+        }
+
+        return existingKeywords;
+      },
+      manageKeywords: function (text, existingKeywords) {
+        Keywords.createKeywordsFromText(text).forEach(function (keywordName) {
+          var index = existingKeywords.findIndex(function (keyword) {
+            return keyword.name === keywordName;
+          });
+
+          if (index === -1) existingKeywords.push(Keywords.createKeyword(keywordName));
+          else {
+            var keyword = existingKeywords[index];
+
+            keyword.count = keyword.count + 1;
+            keyword.ts    = Timestamp.current();
+
+            existingKeywords[index] = keyword;
+          }
+
+          existingKeywords = Keywords.limitKeywords(existingKeywords, 25);
+        });
+
+        return existingKeywords;
+      },
+    };
+
+    var Safeframe = {
+      getDefaultAccessData: function () {
+        return {
+          lastVisit: null,
+          lastPath: null,
+          keywords: [],
+          visits: 0,
+        };
+      },
+      updateSiteData: function (landingPage, data) {
+        data.keywords  = Keywords.manageKeywords(landingPage.pathname, data.keywords);
+        data.lastVisit = Timestamp.current();
+        data.lastPath  = landingPage.pathname;
+        data.visits    = data.visits + 1;
+
+        localStorage.setItem(["site", landingPage.hostname].join(":"), JSON.stringify(data));
+      },
+      loadSiteData: function (site) {
+        var data = localStorage.getItem(["site", site].join(":"));
+        return data ?
+          JSON.parse(data) :
+          Safeframe.getDefaultAccessData();
+      },
+      loadVisitedSites: function () {
+        var data = localStorage.getItem("sites");
+        return data ?
+          JSON.parse(data) :
+          [];
+      },
+      loadAllSitesData: function () {
+        var sites = Safeframe.loadVisitedSites();
+        var memo  = {
+          visitedSites: sites,
+          sites: {},
+        };
+
+        return sites.reduce(function (accumulator, site) {
+          accumulator.sites[site] = Safeframe.loadSiteData(site);
+          return accumulator;
+        }, memo);
+      },
+      registerSite: function (landingPage) {
+        var sites = new Set(Safeframe.loadVisitedSites());
+
+        sites.add(landingPage.hostname);
+        localStorage.setItem("sites", JSON.stringify(Array.from(sites)));
+      },
+      registerAccess: function (landingPage) {
+        if (landingPage !== EMPTY_STRING) {
+          landingPage = new URL(landingPage);
+
+          Safeframe.registerSite(landingPage);
+          Safeframe.updateSiteData(landingPage, Safeframe.loadSiteData(landingPage.hostname));
+        }
+      },
+    };
+  </script>
+</head>
+<body>
+<script type="text/javascript">
+  try {
+    var landingPage = new URL(document.location.href).searchParams.get("landing") || document.referrer;
+    Safeframe.registerAccess(landingPage);
+  } catch (e) {}
+</script>
+
+
+</body></html>

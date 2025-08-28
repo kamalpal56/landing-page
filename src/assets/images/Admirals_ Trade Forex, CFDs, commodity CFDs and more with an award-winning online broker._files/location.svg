@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="40px" viewBox="0 0 28 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon/maps/add_location_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24,4.53 C16.28,4.53 10,10.81 10,18.53 C10,26.87 18.84,38.37 22.48,42.75 C23.28,43.71 24.74,43.71 25.54,42.75 C29.16,38.37 38,26.87 38,18.53 C38,10.81 31.72,4.53 24,4.53 Z M30,20.53 L26,20.53 L26,24.53 C26,25.63 25.1,26.53 24,26.53 C22.9,26.53 22,25.63 22,24.53 L22,20.53 L18,20.53 C16.9,20.53 16,19.63 16,18.53 C16,17.43 16.9,16.53 18,16.53 L22,16.53 L22,12.53 C22,11.43 22.9,10.53 24,10.53 C25.1,10.53 26,11.43 26,12.53 L26,16.53 L30,16.53 C31.1,16.53 32,17.43 32,18.53 C32,19.63 31.1,20.53 30,20.53 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Wireframe-–-Demo-Experimental-–-Green-–-v3" transform="translate(-224.000000, -4203.000000)">
+            <g id="Why-AM" transform="translate(0.000000, 3999.000000)">
+                <g id="Group-10" transform="translate(108.000000, 160.000000)">
+                    <g id="icon/maps/add_location_24px" transform="translate(106.000000, 40.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g fill-rule="nonzero"></g>
+                        <rect id="Color-/-Surface-/-Light" fill="#105EF6" fill-rule="evenodd" mask="url(#mask-2)" x="0" y="0" width="48" height="48"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

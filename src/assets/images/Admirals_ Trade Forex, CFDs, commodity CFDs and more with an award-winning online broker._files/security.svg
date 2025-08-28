@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="44px" viewBox="0 0 36 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 62 (101010) - https://sketch.com -->
+    <title>EBBB7D44-CBAB-4709-944E-8FF5B60A52DB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M16.38,0.5325 L2.38,6.7525 C0.94,7.3925 0,8.8325 0,10.4125 L0,19.8125 C0,30.9125 7.68,41.2925 18,43.8125 C28.32,41.2925 36,30.9125 36,19.8125 L36,10.4125 C36,8.8325 35.06,7.3925 33.62,6.7525 L19.62,0.5325 C18.6,0.0725 17.4,0.0725 16.38,0.5325 Z M18,21.7925 L32,21.7925 C30.94,30.0325 25.44,37.3725 18,39.6725 L18,21.8125 L4,21.8125 L4,10.4125 L18,4.1925 L18,21.7925 Z" id="path-1"></path>
+    </defs>
+    <g id="PPC-LP-2020---Stocks" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stocks-LP-Desktop" transform="translate(-1112.000000, -3024.000000)">
+            <g id="BENEFITS" transform="translate(0.000000, 2836.000000)">
+                <g id="G4-Copy-2" transform="translate(960.000000, 162.000000)">
+                    <g id="icon/hardware/security_24px" transform="translate(152.000000, 26.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g fill-rule="nonzero"></g>
+                        <rect id="Color-/-Surface-/-Light" fill="#105EF6" mask="url(#mask-2)" x="-6" y="-2" width="48" height="48"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

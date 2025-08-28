@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="60px" viewBox="0 0 64 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Wireframe-–-Demo-Experimental-–-Green-–-v3" transform="translate(-533.000000, -3021.000000)">
+            <g id="Instruments" transform="translate(0.000000, 2749.000000)">
+                <g id="Group-15" transform="translate(107.000000, 122.000000)">
+                    <g id="Group-39-Copy-5" transform="translate(398.000000, 128.000000)">
+                        <g id="icon/instruments/bonds/hover" transform="translate(24.000000, 16.000000)">
+                            <g id="icon/instruments/-copy">
+                                <g id="Icons/20/Blue" transform="translate(6.000000, 7.500000)">
+                                    <path d="M48,6 L48,51 C48,54.314 45.314,57 42,57 C38.686,57 36,54.314 36,51 L12,51 L12,6 C12,2.686 14.686,0 18,0 L54,0" id="Combined-Shape" stroke="#1E86FF" stroke-width="2.57142857" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M42,57 L6,57 C2.686,57 0,54.314 0,51 L36,51" id="Stroke-5" stroke="#1E86FF" stroke-width="2.57142857" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <line x1="60" y1="6" x2="48" y2="6" id="Stroke-13" stroke="#1E86FF" stroke-width="2.57142857" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                                    <path d="M48,6 C48,2.686 50.686,0 54,0 L54,0 C57.314,0 60,2.686 60,6" id="Stroke-13-Copy" stroke="#1E86FF" stroke-width="2.57142857" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <g id="Group" transform="translate(21.000000, 9.000000)">
+                                        <line x1="-1.70530257e-12" y1="9" x2="18" y2="9" id="Stroke-17" stroke="#1E86FF" stroke-width="2.57142857" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                                        <line x1="3" y1="1.5" x2="15" y2="1.5" id="Stroke-19" stroke="#1E86FF" stroke-width="2.57142857" opacity="0.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                                        <polygon id="Rectangle-10" fill="#1E86FF" fill-rule="nonzero" opacity="0.5" points="4.5 28.5 13.5 28.5 13.5 34.5 9 31.8 4.5 34.5"></polygon>
+                                        <circle id="Oval-4" stroke="#1E86FF" stroke-width="2.57142857" fill-rule="nonzero" cx="9" cy="22.5" r="6.21428571"></circle>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
